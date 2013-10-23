@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Grid extension: gutter
+   ========================================================================== */
+
+/**
+ * Modifiers for creating gutter between grid cells.
+ *
+ * .Grid--gutter<ORIENTATION><Size>
+ *
+ * <ORIENTATION> can be:
+ *   A = all
+ *   H = horizontal
+ *   V = vertical
+ *
+ * <Size> can be:
+ *   Small
+ *   Medium
+ *   Large
+ */
+
+/* Component modifiers
+   ========================================================================== */
+
+.Grid--gutterASmall,
+.Grid--gutterHSmall {
+  margin-left: -5px;
+}
+
+.Grid--gutterASmall > .Grid-cell,
+.Grid--gutterHSmall > .Grid-cell {
+  padding-left: 5px;
+}
+
+.Grid--gutterAMedium,
+.Grid--gutterHMedium {
+  margin-left: -10px;
+}
+
+.Grid--gutterAMedium > .Grid-cell,
+.Grid--gutterHMedium > .Grid-cell {
+  padding-left: 10px;
+}
+
+.Grid--gutterALarge,
+.Grid--gutterHLarge {
+  margin-left: -20px;
+}
+
+.Grid--gutterALarge > .Grid-cell,
+.Grid--gutterHLarge > .Grid-cell {
+  padding-left: 20px;
+}
+
+.Grid--gutterASmall,
+.Grid--gutterVSmall {
+  margin-top: -5px;
+}
+
+.Grid--gutterASmall > .Grid-cell,
+.Grid--gutterVSmall > .Grid-cell {
+  padding-top: 5px;
+}
+
+.Grid--gutterAMedium,
+.Grid--gutterVMedium {
+  margin-top: -10px;
+}
+
+.Grid--gutterAMedium > .Grid-cell,
+.Grid--gutterVMedium > .Grid-cell {
+  padding-top: 10px;
+}
+
+.Grid--gutterALarge,
+.Grid--gutterVLarge {
+  margin-top: -20px;
+}
+
+.Grid--gutterALarge > .Grid-cell,
+.Grid--gutterVLarge > .Grid-cell {
+  padding-top: 20px;
+}

@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Grid extension: layout
+   ========================================================================== */
+
+/**
+ * Layout modifiers for `Grid`
+ */
+
+/* Component modifiers
+   ========================================================================== */
+
+/**
+ * Split into 2 columns
+ */
+
+.Grid--2col > .Grid-cell {
+  width: 50%;
+}
+
+/**
+ * Split into 3 columns
+ */
+
+.Grid--3col > .Grid-cell {
+  width: 33.333%;
+}
+
+/* Descendant modifiers
+   ========================================================================== */
+
+/**
+ * Use atomic dimension utilities to apply size to a single cell
+ */

@@ -1,0 +1,96 @@
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
+/**
+ * Grid component
+ *
+ * Make use of dimension utilities, or components that extend `Grid` in order
+ * to apply particular widths to cells.
+ *
+ * Example HTML:
+ *
+ * <div class="Grid">
+ *   <div class="Grid-cell u-size1of2"></div>
+ *   <div class="Grid-cell u-size1of2"></div>
+ *   <div class="Grid-cell u-size1of3"></div>
+ *   <div class="Grid-cell u-size1of3"></div>
+ * </div>
+ *
+ * <div class="Grid Grid--justifyCenter">
+ *   <div class="Grid-cell u-size1of3"></div>
+ *   <div class="Grid-cell u-size1of3"></div>
+ * </div>
+ */
+
+/* Component
+   ========================================================================== */
+
+/**
+ * All content must be contained within child `Grid-cell` elements.
+ *
+ * 1. Account for browser defaults of elements that might be the root node of
+ *    the component.
+ * 2. Ensure consistent default alignment.
+ * 3. Remove inter-cell whitespace that appears between `inline-block` child
+ *    elements.
+ */
+
+.Grid {
+  display: block; /* 1 */
+  padding: 0; /* 1 */
+  margin: 0; /* 1 */
+
+  text-align: left; /* 2 */
+  font-size: 0; /* 3 */
+}
+
+/* Component modifiers
+   ========================================================================== */
+
+/**
+ * Make all grid cells shrink wrap (kind of) their content
+ */
+
+.Grid--fit > .Grid-cell {
+  width: auto;
+}
+
+/* Descendants
+   ========================================================================== */
+
+/**
+ * No explicit width by default. Rely on combining `Grid-cell` with a dimension
+ * utility or component that extends `Grid`.
+ *
+ * 1. Fundamentals of the non-float grid layout.
+ * 2. Make cells full-width by default.
+ * 3. Controls vertical positioning of cells.
+ * 4. Reset font size change made in `Grid`.
+ * 5. Keeps content correctly aligned with the grid direction.
+ */
+
+.Grid-cell {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block; /* 1 */
+  margin: 0;
+  padding: 0;
+  width: 100%; /* 2 */
+  vertical-align: top; /* 3 */
+
+  font-size: 1rem; /* 4 */
+  text-align: left; /* 5 */
+}
+
+/* Descendant modifiers
+   ========================================================================== */
+
+/**
+ * Make one cell shrink wrap its content
+ */
+
+.Grid-cell--fit {
+  width: auto;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "components-grid",
+  "repo": "atomic-css/components-grid",
+  "description": "Grid component",
+  "version": "1.0.0",
+  "styles": [
+    "grid.css",
+    "grid.alignment.css",
+    "grid.gutter.css",
+    "grid.layout.css"
+  ],
+  "author": "Lukáš Mladý",
+  "license": "MIT"
+}
