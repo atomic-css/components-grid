@@ -15,8 +15,6 @@ Read more about [Atomic framework](https://github.com/atomic-css/atomic).
 
 * [__Bower:__](http://bower.io)
   `bower install --save atomic-css-components-grid`
-* [__Component(1):__](http://component.io)
-  `component install atomic-css/components-grid`
 * __Download:__
   [zip](https://github.com/atomic-css/components-grid/zipball/master),
   [tar.gz](https://github.com/atomic-css/components-grid/tarball/master)
