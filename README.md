@@ -29,17 +29,6 @@ Read more about [Atomic framework](https://github.com/atomic-css/atomic).
 
 ## Extensions
 
-### `grid.alignment.css`
-
-Component and descendant modifiers for horizontal and vertical alignment.
-
-* `Grid--justifyCenter` - horizontally center all grid cells
-* `Grid--justifyRight` - align all grid cells to right
-* `Grid--alignMiddle` - vertically align all grid cells to middle
-* `Grid--alignBottom` - vertically align all grid cells to bottom
-* `Grid-cell--center` - horizontally center one cell
-* `Grid-cell--right` - align one cell to right
-
 ### `grid.layout.css`
 
 Layout modifiers for `Grid`.
