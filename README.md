@@ -1,13 +1,12 @@
 # Atomic components: grid
 
-CSS Grid component. The grid makes use of `inline-block` and
-`box-sizing` to provide features that float-based layouts cannot.
+CSS Grid component. The grid makes use of flex layout.
 
 N.B. This component relies on particular dimensions being applied to cells in
 the grid via other classes. For example,
 [Atomic utils: dimension](https://github.com/atomic-css/utils-dimension).
-If you need gutter between cells, see
-[Atomic utils: space](https://github.com/atomic-css/utils-space).
+If you need to align the cells, see
+[Atomic utils: alignment](https://github.com/atomic-css/utils-alignment).
 
 Read more about [Atomic framework](https://github.com/atomic-css/atomic).
 
@@ -23,9 +22,9 @@ Read more about [Atomic framework](https://github.com/atomic-css/atomic).
 ## Available classes
 
 * `Grid` - core grid component
-* `Grid--fit` - make all grid units shrink wrap their content
+* `Grid--column` - flow the cells in column direction
+* `Grid--equal` - make all cells equal size.
 * `Grid-cell` - child class representing a unit
-* `Grid-cell--fit` - make one unit shrink wrap its content
 
 ## Extensions
 
@@ -35,6 +34,7 @@ Layout modifiers for `Grid`.
 
 * `Grid--2col` - split into 2 columns
 * `Grid--3col` - split into 3 columns
+* `Grid--4col` - split into 4 columns
 
 ### `grid.gutter.css`
 
@@ -56,10 +56,9 @@ and size `<Size>` can be:
 
 ## Features
 
-* Fluid layout.
+* Flexible layout.
 * Intelligent cell wrapping.
-* Horizontal centering of cells.
-* Custom vertical alignment of cells (top, bottom, or middle).
+* Horizontal and vertical centering of cells.
 * Cell width is controlled independently of grid gutter.
 * Infinite nesting.
 * Built-in redundancy.
@@ -79,55 +78,10 @@ alignment.
 </div>
 ```
 
-All cells within a grid can be centered by adding the `Grid--center` class to
-the grid container:
-
-```html
-<div class="Grid Grid--center">
-  <div class="Grid-cell u-size1of3">{…}</div>
-  <div class="Grid-cell u-size1of3">{…}</div>
-</div>
-```
-
-Or individual cells can be centered on their own line by adding the
-`Grid-cell--center` class to a cell:
-
-```html
-<div class="Grid">
-  <div class="Grid-cell u-size1of2">{…}</div>
-  <div class="Grid-cell u-size1of2">{…}</div>
-  <div class="Grid-cell Grid-cell--center u-size3of4">{…}</div>
-</div>
-```
-
-To create a collection of items with arbitrary width, add the `Grid--fit` class
-to the grid container. This way, we can still control each cell's width or
-vertical alignment.
-
-```html
-<div class="Grid Grid--fit">
-  <div class="Grid-cell">
-    <div class="ProductThumbnail">
-      {…}
-    </div>
-  </div>
-  <div class="Grid-cell">
-    <div class="ProductThumbnail">
-      {…}
-    </div>
-  </div>
-  <div class="Grid-cell">
-    <div class="ProductThumbnail">
-      {…}
-    </div>
-  </div>
-</div>
-```
-
 ## Browser support
 
 * Google Chrome (latest)
 * Opera (latest)
-* Firefox 4+
-* Safari 5+
-* Internet Explorer 9+ (IE 8 needs to replace CSS `rem` units with `px`)
+* Firefox (latest)
+* Safari (latest)
+* Internet Explorer 10+

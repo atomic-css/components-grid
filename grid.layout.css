@@ -3,26 +3,38 @@
    ========================================================================== */
 
 /**
- * Layout modifiers for `Grid`
+ * Layout modifiers for `Grid`.
  */
 
 /* Component modifiers
    ========================================================================== */
 
 /**
- * Split into 2 columns
+ * Split into 2 columns.
  */
 
 .Grid--2col > .Grid-cell {
+  flex: none;
   width: 50%;
 }
 
 /**
- * Split into 3 columns
+ * Split into 3 columns.
  */
 
 .Grid--3col > .Grid-cell {
-  width: 33.333%;
+  flex: none;
+  width: -webkit-calc(100% / 3);
+  width: calc(100% / 3);
+}
+
+/**
+ * Split into 4 columns.
+ */
+
+.Grid--4col > .Grid-cell {
+  flex: none;
+  width: 25%;
 }
 
 /* Descendant modifiers

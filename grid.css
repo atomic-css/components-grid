@@ -29,31 +29,35 @@
 /**
  * All content must be contained within child `Grid-cell` elements.
  *
- * 1. Account for browser defaults of elements that might be the root node of
+ * 1. Flow in rows and wrap by default.
+ * 2. Account for browser defaults of elements that might be the root node of
  *    the component.
- * 2. Ensure consistent default alignment.
- * 3. Remove inter-cell whitespace that appears between `inline-block` child
- *    elements.
  */
 
 .Grid {
-  display: block; /* 1 */
-  padding: 0; /* 1 */
-  margin: 0; /* 1 */
-
-  text-align: left; /* 2 */
-  font-size: 0; /* 3 */
+  display: flex;
+  flex-flow: row wrap; /* 1 */
+  padding: 0; /* 2 */
+  margin: 0; /* 2 */
 }
 
 /* Component modifiers
    ========================================================================== */
 
 /**
- * Make all grid cells shrink wrap (kind of) their content
+ * Flow the cells in column direction.
  */
 
-.Grid--fit > .Grid-cell {
-  width: auto;
+.Grid--column {
+  flex-direction: column;
+}
+
+/**
+ * Make all cells equal size.
+ */
+
+.Grid--equal > .Grid-cell {
+  flex: 1;
 }
 
 /* Descendants
@@ -63,34 +67,12 @@
  * No explicit width by default. Rely on combining `Grid-cell` with a dimension
  * utility or component that extends `Grid`.
  *
- * 1. Fundamentals of the non-float grid layout.
- * 2. Make cells full-width by default.
- * 3. Controls vertical positioning of cells.
- * 4. Reset font size change made in `Grid`.
- * 5. Keeps content correctly aligned with the grid direction.
+ * 1. Full-width cells by default.
  */
 
 .Grid-cell {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  display: inline-block; /* 1 */
   margin: 0;
   padding: 0;
-  width: 100%; /* 2 */
-  vertical-align: top; /* 3 */
-
-  font-size: 1rem; /* 4 */
-  text-align: left; /* 5 */
-}
-
-/* Descendant modifiers
-   ========================================================================== */
-
-/**
- * Make one cell shrink wrap its content
- */
-
-.Grid-cell--fit {
-  width: auto;
+  width: 100%; /* 1 */
 }
