@@ -14,6 +14,9 @@
  */
 
 .Grid--2col > .Grid-cell {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
   flex: none;
   width: 50%;
 }
@@ -23,6 +26,9 @@
  */
 
 .Grid--3col > .Grid-cell {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
   flex: none;
   width: -webkit-calc(100% / 3);
   width: calc(100% / 3);
@@ -33,6 +39,9 @@
  */
 
 .Grid--4col > .Grid-cell {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
   flex: none;
   width: 25%;
 }
