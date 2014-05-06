@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Atomic CSS - Grid component</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../bower_components/atomic-css-utils-alignment/alignment.css">
+    <link rel="stylesheet" href="../bower_components/atomic-css-components-test/test.css">
+    <link rel="stylesheet" href="../bower_components/atomic-css-utils-dimension/dimension.css">
+
+    <link rel="stylesheet" href="../grid.css">
+    <link rel="stylesheet" href="../grid.gutter.css">
+    <link rel="stylesheet" href="../grid.layout.css">
+
+    <style>
+      .testing-Box {
+        height: 50px;
+
+        text-align: center;
+        line-height: 50px;
+        color: #fff;
+
+        background-color: #973373;
+        border: 1px solid #5b2840;
+      }
+
+      .testing-Box--tall {
+        height: 100px;
+      }
+
+      .testing-Box--taller {
+        height: 150px;
+      }
+
+      .u-sizeFlex {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Test">
+      <h1 class="Test-title">Grid component</h1>
+
+      <ul class="Test-support">
+        <li class="Test-browser Test-browser--chrome">XX+</li>
+        <li class="Test-browser Test-browser--firefox">XX+</li>
+        <li class="Test-browser Test-browser--ie">10+</li>
+        <li class="Test-browser Test-browser--opera">XX+</li>
+        <li class="Test-browser Test-browser--safari">6.1+</li>
+      </ul>
+
+      <ul class="Test-support">
+        <li class="Test-browser Test-browser--android">XX+</li>
+        <li class="Test-browser Test-browser--blackberry">XX+</li>
+        <li class="Test-browser Test-browser--ieMobile">XX+</li>
+        <li class="Test-browser Test-browser--safariIos">XX+</li>
+      </ul>
+
+      <h2 class="Test-describe">.Grid</h2>
+
+      <h3 class="Test-it">Should be infinitely nestable.</h3>
+
+      <div class="Test-run">
+        <div class="Grid Grid--equal">
+          <div class="Grid-cell">
+            <div class="testing-Box">1</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="Grid Grid--equal">
+              <div class="Grid-cell">
+                <div class="testing-Box">2.1</div>
+              </div>
+              <div class="Grid-cell">
+                <div class="testing-Box">2.2</div>
+              </div>
+              <div class="Grid-cell">
+                <div class="testing-Box">2.3</div>
+              </div>
+            </div>
+          </div>
+          <div class="Grid-cell">
+            <div class="testing-Box">3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="Test-run">
+        <div class="Grid Grid--equal">
+          <div class="Grid-cell">
+            <div class="Grid Grid--equal">
+              <div class="Grid-cell">
+                <div class="testing-Box">1.1</div>
+              </div>
+              <div class="Grid-cell">
+                <div class="Grid Grid--equal">
+                  <div class="Grid-cell">
+                    <div class="testing-Box">1.2.1</div>
+                  </div>
+                  <div class="Grid-cell">
+                    <div class="testing-Box">1.2.2</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Grid-cell">
+            <div class="testing-Box">3</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="Test-it">Should work with alignment utilities.</h3>
+
+      <div class="Test-run">
+        <div class="Grid Grid--equal u-alignICenter">
+          <div class="Grid-cell">
+            <div class="testing-Box">1 - align items center</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="testing-Box testing-Box--tall">2 - align items center</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="testing-Box">3 - align items center</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="Test-run">
+        <div class="Grid u-justifyCCenter">
+          <div class="Grid-cell u-size1of4">
+            <div class="testing-Box">1 - justify center</div>
+          </div>
+          <div class="Grid-cell u-size1of4">
+            <div class="testing-Box testing-Box--tall">2 - justify center</div>
+          </div>
+          <div class="Grid-cell u-size1of4">
+            <div class="testing-Box">3 - justify center</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="Test-describe">.Grid--equal</h2>
+
+      <h3 class="Test-it">Should make its cells flexible by factor 1, leading to equal width.</h3>
+
+      <div class="Test-run">
+        <div class="Grid Grid--equal">
+          <div class="Grid-cell">
+            <div class="testing-Box">1</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="testing-Box">2</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="testing-Box">3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="Test-run">
+        <div class="Grid Grid--equal">
+          <div class="Grid-cell">
+            <div class="testing-Box">1</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="testing-Box">2</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="testing-Box">3</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="testing-Box">4</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="testing-Box">5</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="Test-it">Should affect only direct children.</h3>
+
+      <div class="Test-run">
+        <div class="Grid Grid--equal">
+          <div class="Grid-cell">
+            <div class="testing-Box">1</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="Grid">
+              <div class="Grid-cell">
+                <div class="testing-Box">2.1</div>
+              </div>
+              <div class="Grid-cell">
+                <div class="testing-Box">2.2</div>
+              </div>
+            </div>
+          </div>
+          <div class="Grid-cell">
+            <div class="testing-Box">3</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="Test-describe">.Grid--gutter&lt;ORIENTATION&gt;&lt;Size&gt;</h2>
+
+      <h3 class="Test-it">Should create a gutter between cells.</h3>
+
+      <div class="Test-run">
+        <div class="Grid Grid--equal Grid--gutterHLarge">
+          <div class="Grid-cell">
+            <div class="testing-Box">1</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="testing-Box">2</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="testing-Box">3</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="Test-describe">.Grid-cell</h2>
+
+      <h3 class="Test-it">Should be 100% width by default.</h3>
+
+      <div class="Test-run">
+        <div class="Grid">
+          <div class="Grid-cell">
+            <div class="testing-Box">1</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="testing-Box">2</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="testing-Box">3</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="Test-it">Should work with dimension utilities.</h3>
+
+      <div class="Test-run">
+        <div class="Grid">
+          <div class="Grid-cell u-sizeAuto">
+            <div class="testing-Box">auto</div>
+          </div>
+          <div class="Grid-cell u-flexOne">
+            <div class="testing-Box">flex 1</div>
+          </div>
+          <div class="Grid-cell u-size1of4">
+            <div class="testing-Box">25%</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="Test-it">Should work with alignment utilities.</h3>
+
+      <div class="Test-run">
+        <div class="Grid Grid--equal">
+          <div class="Grid-cell">
+            <div class="testing-Box">1</div>
+          </div>
+          <div class="Grid-cell u-alignSCenter">
+            <div class="testing-Box testing-Box--tall">2 - align center</div>
+          </div>
+          <div class="Grid-cell u-alignSEnd">
+            <div class="testing-Box testing-Box--taller">3</div>
+          </div>
+          <div class="Grid-cell u-alignSEnd">
+            <div class="testing-Box">4 - align end</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
