@@ -1,18 +1,22 @@
 {
   "name": "atomic-css-components-grid",
-  "version": "1.0.0",
+  "version": "2.0.0-beta",
   "homepage": "https://github.com/atomic-css/components-grid",
   "authors": [
-    "Lukáš Mladý",
-    "Nicolas Gallagher"
+    "Lukáš Mladý"
   ],
   "description": "Grid component",
   "main": [
     "grid.css",
-    "grid.alignment.css",
     "grid.gutter.css",
     "grid.layout.css"
   ],
+  "devDependencies": {
+    "atomic-css-components-test": "~1.1.0",
+    "atomic-css-utils-alignment": "1.0.0-beta.2",
+    "atomic-css-utils-dimension": "~2.0.0-beta.2",
+    "atomic-css-utils-display": "~1.0.0"
+  },
   "license": "MIT",
   "ignore": [
     ".*",
