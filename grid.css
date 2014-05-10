@@ -63,27 +63,6 @@
   flex-direction: column;
 }
 
-/* Cells size */
-
-/**
- * Make all cells content-sized.
- */
-
-.Grid--auto > .Grid-cell {
-  width: auto;
-}
-
-/**
- * Make all cells equal size.
- */
-
-.Grid--equal > .Grid-cell {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
 /* Descendants
    ========================================================================== */
 

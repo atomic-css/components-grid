@@ -23,8 +23,6 @@ Read more about [Atomic framework](https://github.com/atomic-css/atomic).
 
 * `Grid` - core grid component
 * `Grid--column` - flow the cells in column direction
-* `Grid--auto` - make all cells content-sized
-* `Grid--equal` - make all cells equal size
 * `Grid-cell` - child class representing a unit
 
 ## Extensions
@@ -33,6 +31,8 @@ Read more about [Atomic framework](https://github.com/atomic-css/atomic).
 
 Layout modifiers for `Grid`.
 
+* `Grid--auto` - make all cells content-sized
+* `Grid--equal` - make all cells equal width
 * `Grid--2col` - split into 2 columns
 * `Grid--3col` - split into 3 columns
 * `Grid--4col` - split into 4 columns
