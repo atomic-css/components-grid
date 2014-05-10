@@ -33,6 +33,7 @@ Layout modifiers for `Grid`.
 
 * `Grid--auto` - make all cells content-sized
 * `Grid--equalWidth` - make all cells equal width
+* `Grid--equalHeight` - make all cells equal height
 * `Grid--2col` - split into 2 columns
 * `Grid--3col` - split into 3 columns
 * `Grid--4col` - split into 4 columns
