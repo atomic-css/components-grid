@@ -32,7 +32,7 @@ Read more about [Atomic framework](https://github.com/atomic-css/atomic).
 Layout modifiers for `Grid`.
 
 * `Grid--auto` - make all cells content-sized
-* `Grid--equal` - make all cells equal width
+* `Grid--equalWidth` - make all cells equal width
 * `Grid--2col` - split into 2 columns
 * `Grid--3col` - split into 3 columns
 * `Grid--4col` - split into 4 columns
