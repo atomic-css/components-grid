@@ -21,7 +21,16 @@
 
 /**
  * Make all cells equal main size.
+ * Do not apply 'row' flow direction if .Grid--column is specified (specifity issue).
  */
+
+.Grid--equalMain:not(.Grid--column) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
 
 .Grid--equalMain > .Grid-cell {
   -webkit-box-flex: 1;
@@ -41,15 +50,40 @@
   display: flex;
 }
 
+/* Grid columns */
+
+/**
+ * 1. Columns need to be laid out in rows.
+ */
+
+.Grid--2col,
+.Grid--3col,
+.Grid--4col {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; /* 1 */
+}
+
+/**
+ * 1. We are going to specify percentage width, so no flexing needed.
+ */
+
+.Grid--2col > .Grid-cell,
+.Grid--3col > .Grid-cell,
+.Grid--4col > .Grid-cell {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none; /* 1 */
+}
+
 /**
  * Split into 2 columns.
  */
 
 .Grid--2col > .Grid-cell {
-  -webkit-box-flex: 0;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
   width: 50%;
 }
 
@@ -58,12 +92,7 @@
  */
 
 .Grid--3col > .Grid-cell {
-  -webkit-box-flex: 0;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  width: -webkit-calc(100% / 3);
-  width: calc(100% / 3);
+  width: 33.333%;
 }
 
 /**
@@ -71,10 +100,6 @@
  */
 
 .Grid--4col > .Grid-cell {
-  -webkit-box-flex: 0;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
   width: 25%;
 }
 
