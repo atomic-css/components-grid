@@ -63,12 +63,12 @@
       <h3 class="Test-it">Should be infinitely nestable.</h3>
 
       <div class="Test-run">
-        <div class="Grid Grid--equal">
+        <div class="Grid Grid--equalMain">
           <div class="Grid-cell">
             <div class="testing-Box">1</div>
           </div>
           <div class="Grid-cell">
-            <div class="Grid Grid--equal">
+            <div class="Grid Grid--equalMain">
               <div class="Grid-cell">
                 <div class="testing-Box">2.1</div>
               </div>
@@ -87,14 +87,14 @@
       </div>
 
       <div class="Test-run">
-        <div class="Grid Grid--equal">
+        <div class="Grid Grid--equalMain">
           <div class="Grid-cell">
-            <div class="Grid Grid--equal">
+            <div class="Grid Grid--equalMain">
               <div class="Grid-cell">
                 <div class="testing-Box">1.1</div>
               </div>
               <div class="Grid-cell">
-                <div class="Grid Grid--equal">
+                <div class="Grid Grid--equalMain">
                   <div class="Grid-cell">
                     <div class="testing-Box">1.2.1</div>
                   </div>
@@ -114,7 +114,7 @@
       <h3 class="Test-it">Should work with alignment utilities.</h3>
 
       <div class="Test-run">
-        <div class="Grid Grid--equal u-alignICenter">
+        <div class="Grid Grid--equalMain u-alignICenter">
           <div class="Grid-cell">
             <div class="testing-Box">1 - align items center</div>
           </div>
@@ -128,7 +128,7 @@
       </div>
 
       <div class="Test-run">
-        <div class="Grid u-justifyCCenter">
+        <div class="Grid Grid--row u-justifyCCenter">
           <div class="Grid-cell u-size1of4">
             <div class="testing-Box">1 - justify center</div>
           </div>
@@ -141,12 +141,12 @@
         </div>
       </div>
 
-      <h2 class="Test-describe">.Grid--equal</h2>
+      <h2 class="Test-describe">.Grid--equalMain</h2>
 
-      <h3 class="Test-it">Should make its cells flexible by factor 1, leading to equal width.</h3>
+      <h3 class="Test-it">Should make its cells flexible by factor 1, leading to equal main size.</h3>
 
       <div class="Test-run">
-        <div class="Grid Grid--equal">
+        <div class="Grid Grid--equalMain">
           <div class="Grid-cell">
             <div class="testing-Box">1</div>
           </div>
@@ -160,7 +160,7 @@
       </div>
 
       <div class="Test-run">
-        <div class="Grid Grid--equal">
+        <div class="Grid Grid--equalMain">
           <div class="Grid-cell">
             <div class="testing-Box">1</div>
           </div>
@@ -182,7 +182,7 @@
       <h3 class="Test-it">Should affect only direct children.</h3>
 
       <div class="Test-run">
-        <div class="Grid Grid--equal">
+        <div class="Grid Grid--equalMain">
           <div class="Grid-cell">
             <div class="testing-Box">1</div>
           </div>
@@ -207,7 +207,7 @@
       <h3 class="Test-it">Should create a gutter between cells.</h3>
 
       <div class="Test-run">
-        <div class="Grid Grid--equal Grid--gutterHLarge">
+        <div class="Grid Grid--equalMain Grid--gutterHLarge">
           <div class="Grid-cell">
             <div class="testing-Box">1</div>
           </div>
@@ -241,7 +241,7 @@
       <h3 class="Test-it">Should work with dimension utilities.</h3>
 
       <div class="Test-run">
-        <div class="Grid">
+        <div class="Grid Grid--row">
           <div class="Grid-cell u-sizeAuto">
             <div class="testing-Box">auto</div>
           </div>
@@ -257,7 +257,7 @@
       <h3 class="Test-it">Should work with alignment utilities.</h3>
 
       <div class="Test-run">
-        <div class="Grid Grid--equal">
+        <div class="Grid Grid--equalMain">
           <div class="Grid-cell">
             <div class="testing-Box">1</div>
           </div>
