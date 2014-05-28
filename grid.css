@@ -52,6 +52,18 @@
 /* Cells flow direction */
 
 /**
+ * Flow the cells in row direction.
+ */
+
+.Grid--row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+/**
  * Flow the cells in column direction.
  */
 

@@ -22,6 +22,7 @@ Read more about [Atomic framework](https://github.com/atomic-css/atomic).
 ## Available classes
 
 * `Grid` - core grid component
+* `Grid--row` - flow the cells in row direction
 * `Grid--column` - flow the cells in column direction
 * `Grid-cell` - child class representing a unit
 
