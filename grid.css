@@ -29,7 +29,7 @@
 /**
  * All content must be contained within child `Grid-cell` elements.
  *
- * 1. Flow in rows and wrap by default.
+ * 1. Flow in columns and wrap by default.
  * 2. Account for browser defaults of elements that might be the root node of
  *    the component.
  */
@@ -39,9 +39,9 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap; /* 1 */
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap; /* 1 */
   padding: 0; /* 2 */
   margin: 0; /* 2 */
 }

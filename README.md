@@ -73,7 +73,7 @@ Each cell can be directly or indirectly styled to control their width and
 alignment.
 
 ```html
-<div class="Grid">
+<div class="Grid Grid--row">
   <div class="Grid-cell u-size1of2">{…}</div>
   <div class="Grid-cell u-size1of2">{…}</div>
   <div class="Grid-cell u-size1of3">{…}</div>
